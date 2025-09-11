@@ -64,21 +64,26 @@
             padding: 50px 20px;
             background-color: rgba(0, 0, 0, 0.7);
             margin: 50px 0;
+            background-image: url('https://github.com/aespasynkmy/home/blob/main/bg.jpg?raw=true'); /* Background image */
+            background-size: cover; /* Ensures the image covers the entire section */
+            background-position: center center; /* Keeps the image centered */
+            background-attachment: fixed; /* Keeps the background fixed during scrolling */
+            height: 400px; /* Set height for the section */
         }
 
         .about h1 {
-            font-size: 3.5em; /* Increase title size */
-            font-weight: bold; /* Make the title bold */
+            font-size: 3.5em;
+            font-weight: bold;
             margin-bottom: 20px;
-            letter-spacing: 2px; /* Add spacing between letters for emphasis */
+            letter-spacing: 2px;
         }
 
         .about p {
             font-size: 1.2em;
-            line-height: 1.8; /* Increase line height for better readability */
+            line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
-            font-family: 'Georgia', serif; /* Elegant serif font for paragraphs */
+            font-family: 'Georgia', serif;
         }
 
         /* Image carousel section */
@@ -122,7 +127,7 @@
         .anniversary {
             text-align: center;
             padding: 20px;
-            font-size: 1.4em; /* Increase font size for anniversary text */
+            font-size: 1.4em;
             font-family: 'KaiTi', 'Microsoft YaHei', sans-serif;
             font-weight: bold;
             background-color: black;
@@ -133,29 +138,29 @@
         @media screen and (max-width: 768px) {
             /* On smaller screens, adjust navigation font size and spacing */
             nav ul {
-                flex-direction: column; /* Stack the navigation items vertically */
-                align-items: center; /* Center the items */
+                flex-direction: column;
+                align-items: center;
             }
 
             nav ul li {
-                margin: 10px 0; /* Reduce spacing between items */
+                margin: 10px 0;
             }
 
             nav ul li a {
-                font-size: 18px; /* Reduce font size for smaller screens */
+                font-size: 18px;
             }
 
             .about h1 {
-                font-size: 2.5em; /* Adjust title size for smaller screens */
+                font-size: 2.5em;
             }
 
             .about p {
-                font-size: 1.1em; /* Adjust text size for smaller screens */
-                padding: 0 15px; /* Add padding to text for better readability */
+                font-size: 1.1em;
+                padding: 0 15px;
             }
 
             .footer-img {
-                max-height: 60vh; /* Reduce image height on smaller screens */
+                max-height: 60vh;
             }
         }
     </style>
@@ -182,10 +187,6 @@
                 <img src="https://github.com/aespasynkmy/home/blob/main/aespa-photo.jpg?raw=true" alt="Aespa 1">
                 <img src="https://github.com/aespasynkmy/home/blob/main/aespa-photo1.jpg?raw=true" alt="Aespa 2">
                 <img src="https://github.com/aespasynkmy/home/blob/main/aespa-photo2.jpg?raw=true" alt="Aespa 3">
-            </div>
-            <div class="carousel-buttons">
-                <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </section>
 
