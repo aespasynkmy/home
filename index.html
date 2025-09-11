@@ -101,21 +101,19 @@
             object-fit: contain; /* Ensures images maintain their aspect ratio */
         }
 
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
+        /* Carousel button hover effect */
         .carousel-button {
             background-color: rgba(0, 0, 0, 0.5);
             border: none;
             padding: 10px;
             color: white;
             cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .carousel-button:hover {
+            transform: scale(1.2); /* Makes the button 20% larger */
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background when hovered */
         }
 
         /* Anniversary text at bottom */
