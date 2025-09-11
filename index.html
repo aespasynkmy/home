@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aespa Website</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif; /* Changed to Microsoft YaHei */
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        /* Header and navigation */
+        header {
+            padding: 20px;
+            background-color: black;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 30px; /* Increased the margin between the items */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 120px; /* Increased the size of the logo */
+            height: auto;
+            margin-right: 15px;
+        }
+
+        /* About section */
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 50px 0;
+        }
+
+        .about h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Image section */
+        .footer-img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: cover;
+        }
+
+        /* Anniversary text at bottom */
+        .anniversary {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            background-color: black;
+            color: #ff99cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with navigation -->
+        <header>
+            <nav>
+                <ul>
+                    <!-- Logo now has a larger size -->
+                    <li><a href="http://jw.sdufe.edu.cn/" target="_blank"><img src="logo.jpg" alt="Logo" class="logo"></a></li>
+                    <li><a href="https://www.dongqiudi.com/" target="_blank">简介</a></li>
+                    <li><a href="https://www.icourse163.org/" target="_blank">来时路</a></li>
+                    <li><a href="https://www.sdufe.edu.cn/" target="_blank">舞台</a></li>
+                    <li><a href="https://passport2.chaoxing.com/login?fid=&newversion=true&refer=https://i.chaoxing.com" target="_blank">综艺</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Image section (above About section) -->
+        <section>
+            <img src="aespa-photo.jpg" alt="Aespa" class="footer-img">
+        </section>
+
+        <!-- About aespa Section -->
+        <section class="about">
+            <h1>About aespa</h1>
+            <p>Aespa 是SM娱乐在2014年推出的女子组合，继Red Velvet之后，六年间再度推出了全新面貌。该团体开创了元宇宙的概念，并在SM对“感恩”的理解上推出了新概念：名为“KWANGYA”的世界设定，呼应了在虚拟世界里，虚拟人物与现实音乐的结合，创造出具有K-Pop风格的创新音乐风格。</p>
+        </section>
+    </div>
+
+    <!-- Anniversary text at bottom -->
+    <footer class="anniversary">
+        aespasynkmy 五周年的纪念
+    </footer>
+</body>
+</html>
