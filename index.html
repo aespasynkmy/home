@@ -88,32 +88,18 @@
             margin: 0 auto;
             overflow: hidden;
             position: relative;
+            cursor: grab; /* Add cursor style for drag */
         }
 
         .carousel-images {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.3s ease-in-out; /* Smooth transition when dragging */
         }
 
         .carousel-images img {
             width: 100%;
             height: auto;
             object-fit: contain; /* Ensures images maintain their aspect ratio */
-        }
-
-        /* Carousel button hover effect */
-        .carousel-button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            padding: 10px;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-        }
-
-        .carousel-button:hover {
-            transform: scale(1.2); /* Makes the button 20% larger */
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background when hovered */
         }
 
         /* Anniversary text at bottom */
@@ -181,10 +167,6 @@
                 <img src="https://github.com/aespasynkmy/home/blob/main/aespa-photo1.jpg?raw=true" alt="Aespa 2">
                 <img src="https://github.com/aespasynkmy/home/blob/main/aespa-photo2.jpg?raw=true" alt="Aespa 3">
             </div>
-            <div class="carousel-buttons">
-                <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
-            </div>
         </section>
 
         <!-- About aespa Section -->
@@ -202,17 +184,37 @@
     </footer>
 
     <script>
-        // JavaScript for carousel slide movement
-        let currentSlide = 0;
+        // JavaScript for image drag movement
+        const carousel = document.querySelector('.carousel');
+        const carouselImages = document.querySelector('.carousel-images');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-        function moveSlide(step) {
-            const slides = document.querySelectorAll('.carousel-images img');
-            const totalSlides = slides.length;
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.add('active');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carouselImages.scrollLeft;
+        });
 
-            currentSlide = (currentSlide + step + totalSlides) % totalSlides;  // Loop back if out of bounds
-            const newTransform = -currentSlide * 100 + '%';
-            document.querySelector('.carousel-images').style.transform = `translateX(${newTransform})`;
-        }
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 3; // Scroll speed
+            carouselImages.scrollLeft = scrollLeft - walk;
+        });
     </script>
 </body>
 </html>
