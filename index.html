@@ -26,6 +26,8 @@
             padding: 0;
             display: inline-flex;
             align-items: center;
+            justify-content: center; /* Center the navigation items */
+            width: 100%;
         }
 
         nav ul li {
@@ -82,6 +84,36 @@
             background-color: black;
             color: #ff99cc;
         }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            /* On smaller screens, adjust navigation font size and spacing */
+            nav ul {
+                flex-direction: column; /* Stack the navigation items vertically */
+                align-items: center; /* Center the items */
+            }
+
+            nav ul li {
+                margin: 10px 0; /* Reduce spacing between items */
+            }
+
+            nav ul li a {
+                font-size: 18px; /* Reduce font size for smaller screens */
+            }
+
+            .about h1 {
+                font-size: 2.5em; /* Adjust title size for smaller screens */
+            }
+
+            .about p {
+                font-size: 1.1em; /* Adjust text size for smaller screens */
+                padding: 0 15px; /* Add padding to text for better readability */
+            }
+
+            .footer-img {
+                max-height: 60vh; /* Reduce image height on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -119,5 +151,3 @@
     </footer>
 </body>
 </html>
-
-
