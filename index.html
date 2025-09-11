@@ -33,6 +33,7 @@
         nav ul li {
             display: inline;
             margin: 0 30px;
+            text-align: center;
         }
 
         nav ul li a {
@@ -40,6 +41,14 @@
             text-decoration: none;
             font-size: 24px;
             font-family: 'Microsoft YaHei', sans-serif;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        nav ul li a img {
+            width: 20px; /* Adjust the image size */
+            height: auto;
+            margin-right: 10px; /* Space between the image and text */
         }
 
         /* Logo styling */
@@ -82,8 +91,8 @@
             padding: 20px;
             font-size: 1.2em;
             background-color: black;
-            color: white; /* Set text color to white */
-            font-family: 'KaiTi', 'Microsoft YaHei', sans-serif; /* Set font to KaiTi */
+            color: white;
+            font-family: 'KaiTi', 'Microsoft YaHei', sans-serif;
         }
 
         /* Media queries for responsiveness */
@@ -123,12 +132,10 @@
         <header>
             <nav>
                 <ul>
-                    <!-- Logo with GitHub URL -->
-                    <li><a href="http://www.baidu.com/" target="_blank"><img src="https://github.com/aespasynkmy/home/blob/main/synklogo.png?raw=true" alt="Logo" class="logo"></a></li>
-                    <li><a href="https://www.baidu.com/" target="_blank">简介</a></li>
-                    <li><a href="https://www.baidu.com/" target="_blank">来时路</a></li>
-                    <li><a href="https://www.baidu.com/" target="_blank">舞台</a></li>
-                    <li><a href="https://www.baidu.com/" target="_blank">综艺</a></li>
+                    <li><a href="http://www.baidu.com/" target="_blank"><img src="https://github.com/aespasynkmy/home/blob/images/karina.png?raw=true" alt="Karina">简介</a></li>
+                    <li><a href="https://www.baidu.com/" target="_blank"><img src="https://github.com/aespasynkmy/home/blob/images/giselle.png?raw=true" alt="Giselle">来时路</a></li>
+                    <li><a href="https://www.baidu.com/" target="_blank"><img src="https://github.com/aespasynkmy/home/blob/images/winter.png?raw=true" alt="Winter">舞台</a></li>
+                    <li><a href="https://www.baidu.com/" target="_blank"><img src="https://github.com/aespasynkmy/home/blob/images/ning.png?raw=true" alt="Ning">综艺</a></li>
                 </ul>
             </nav>
         </header>
@@ -148,8 +155,7 @@
 
     <!-- Anniversary text at bottom -->
     <footer class="anniversary">
-        aespa_synkMY丨HAPPY 5TH ANNIVERSARY
+        aespasynkmy 五周年的纪念
     </footer>
 </body>
 </html>
-
