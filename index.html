@@ -7,7 +7,7 @@
     <style>
         /* General styling */
         body {
-            font-family: 'Microsoft YaHei', sans-serif; /* Changed to Microsoft YaHei */
+            font-family: 'Microsoft YaHei', sans-serif;
             margin: 0;
             padding: 0;
             background-color: black;
@@ -21,16 +21,23 @@
             text-align: center;
         }
 
+        nav {
+            width: 80%;  /* Set the width of the navigation */
+            margin: 0 auto;  /* Center align the navigation */
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
             display: inline-flex;
             align-items: center;
+            justify-content: center;  /* Center the items horizontally */
+            width: 100%;  /* Ensure the ul takes full width */
         }
 
         nav ul li {
             display: inline;
-            margin: 0 30px; /* Increased the margin between the items */
+            margin: 0 40px; /* Increased the margin between the items */
         }
 
         nav ul li a {
@@ -42,7 +49,7 @@
 
         /* Logo styling */
         .logo {
-            width: 120px; /* Increased the size of the logo */
+            width: 100px;  /* Adjust logo size */
             height: auto;
             margin-right: 15px;
         }
@@ -90,7 +97,7 @@
         <header>
             <nav>
                 <ul>
-                    <!-- Logo now has a larger size -->
+                    <!-- Logo with GitHub URL -->
                     <li><a href="http://jw.sdufe.edu.cn/" target="_blank"><img src="logo.jpg" alt="Logo" class="logo"></a></li>
                     <li><a href="https://www.dongqiudi.com/" target="_blank">简介</a></li>
                     <li><a href="https://www.icourse163.org/" target="_blank">来时路</a></li>
@@ -102,7 +109,7 @@
 
         <!-- Image section (above About section) -->
         <section>
-            <img src="aespa-photo.jpg" alt="Aespa" class="footer-img">
+            <img src="https://github.com/username/repository/blob/main/images/aespa-photo.jpg?raw=true" alt="Aespa" class="footer-img">
         </section>
 
         <!-- About aespa Section -->
@@ -118,4 +125,3 @@
     </footer>
 </body>
 </html>
-
